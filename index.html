@@ -4,354 +4,309 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>I Am Alive - Privacy Policy</title>
+<title>I Am Alive | Personal Safety App</title>
 
 <style>
 
 :root{
-  --primary:#2563eb;
-  --text:#1f2937;
-  --muted:#6b7280;
-  --bg:#f9fafb;
-  --card:#ffffff;
+--primary:#2563eb;
+--dark:#111827;
+--text:#374151;
+--muted:#6b7280;
+--bg:#f9fafb;
+--card:#ffffff;
 }
 
 *{
-  box-sizing:border-box;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body{
-  margin:0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+background:var(--bg);
+color:var(--text);
+line-height:1.7;
 }
 
 .container{
-  max-width:900px;
-  margin:auto;
-  padding:40px 20px;
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
 }
 
 header{
-  text-align:center;
-  margin-bottom:40px;
+background:white;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:100;
 }
 
-header h1{
-  color:var(--primary);
-  margin-bottom:10px;
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1100px;
+margin:auto;
+padding:15px 20px;
 }
 
-header p{
-  color:var(--muted);
+.logo{
+font-weight:700;
+color:var(--primary);
+font-size:20px;
 }
 
-.card{
-  background:var(--card);
-  padding:35px;
-  border-radius:10px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:var(--text);
+font-weight:500;
 }
 
-h2{
-  margin-top:35px;
-  color:var(--primary);
+.hero{
+text-align:center;
+padding:80px 20px;
 }
 
-ul{
-  padding-left:20px;
+.hero h1{
+font-size:42px;
+color:var(--dark);
+margin-bottom:10px;
 }
 
-li{
-  margin-bottom:6px;
-}
-
-footer{
-  text-align:center;
-  margin-top:40px;
-  color:var(--muted);
-  font-size:14px;
-}
-
-.email{
-  color:var(--primary);
-  text-decoration:none;
-  font-weight:600;
+.hero p{
+color:var(--muted);
+font-size:18px;
 }
 
 .section{
-  margin-bottom:20px;
+background:white;
+margin-top:30px;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.section h2{
+color:var(--primary);
+margin-bottom:20px;
+}
+
+ul{
+padding-left:20px;
+margin-top:10px;
+}
+
+footer{
+text-align:center;
+margin-top:40px;
+padding:20px;
+color:var(--muted);
+font-size:14px;
+}
+
+.button{
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
+background:var(--primary);
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:30px;
+}
+
+.nav{
+flex-direction:column;
+align-items:flex-start;
+}
+
+nav{
+margin-top:10px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
-
 <header>
-<h1>I Am Alive Privacy Policy</h1>
-<p>Last Updated: March 9, 2026</p>
+<div class="nav">
+<div class="logo">I Am Alive</div>
+<nav>
+<a href="#about">About</a>
+<a href="#privacy">Privacy</a>
+<a href="#terms">Terms</a>
+<a href="#safety">Safety</a>
+<a href="#deletion">Data Deletion</a>
+<a href="#support">Support</a>
+</nav>
+</div>
 </header>
 
-<div class="card">
+<div class="hero">
 
-<h2>1. Introduction</h2>
+<h1>Your Safety Matters</h1>
 
 <p>
-I Am Alive ("we", "our", or "us") is committed to protecting your privacy.
-This Privacy Policy explains how information is collected, used, and protected when you use the I Am Alive mobile application.
+I Am Alive is a personal safety app that ensures someone knows if you are safe.
+Daily check-ins, SOS alerts, and location sharing help protect you when it matters most.
+</p>
+
+<a class="button" href="#about">Learn More</a>
+
+</div>
+
+<div class="container">
+
+<section id="about" class="section">
+
+<h2>About I Am Alive</h2>
+
+<p>
+I Am Alive is a personal safety and emergency alert application designed to help users stay connected with trusted contacts.
+If a user fails to check in or triggers an emergency alert, the app automatically notifies their emergency contacts with relevant information including location details.
 </p>
 
 <p>
-The application is designed to help users stay safe by providing check-in reminders,
-emergency alerts, and location-based safety notifications to trusted contacts.
-</p>
-
-<p>
-By using the I Am Alive application, you agree to the data practices described in this Privacy Policy.
-</p>
-
-
-<h2>2. Information We Collect</h2>
-
-<p>We may collect several types of information in order to provide our services effectively.</p>
-
-<h3>Account Information</h3>
-
-<ul>
-<li>Email address</li>
-<li>Phone number</li>
-<li>Name (optional)</li>
-<li>Password (securely encrypted)</li>
-</ul>
-
-<h3>Emergency Contact Information</h3>
-
-<p>
-Users can add trusted contacts who may be notified during emergencies or missed check-ins.
+The app is designed for individuals, travelers, families, and workers who want an extra layer of safety and peace of mind.
 </p>
 
 <ul>
-<li>Contact name</li>
-<li>Phone number</li>
-<li>Email address</li>
-<li>Notification preferences</li>
+<li>Daily safety check-ins</li>
+<li>Automatic missed check-in alerts</li>
+<li>Emergency SOS alerts</li>
+<li>Location sharing during incidents</li>
+<li>Trusted emergency contact notifications</li>
 </ul>
 
-<h3>Location Information</h3>
+</section>
+
+<section id="privacy" class="section">
+
+<h2>Privacy Policy</h2>
 
 <p>
-Location data may be collected in order to provide emergency services and safety alerts.
+We respect your privacy and only collect data required to provide safety services.
 </p>
 
-<p>Location may be collected when:</p>
-
 <ul>
-<li>You perform a safety check-in</li>
-<li>You trigger an SOS alert</li>
-<li>Background location tracking is enabled</li>
-</ul>
-
-<p>Location information may include:</p>
-
-<ul>
-<li>Latitude and longitude</li>
-<li>GPS accuracy</li>
-<li>Speed and heading</li>
-<li>Approximate address</li>
+<li>Email and phone number for account creation</li>
+<li>Emergency contact information</li>
+<li>Location data during check-ins and SOS events</li>
+<li>Device information for reliability</li>
 </ul>
 
 <p>
-This information helps emergency contacts identify your last known location in case of danger.
+Location data helps emergency contacts identify your last known position during emergencies.
+Users can control or disable location tracking in settings.
 </p>
-
-
-<h3>Device Information</h3>
-
-<ul>
-<li>Device type</li>
-<li>Operating system</li>
-<li>App version</li>
-<li>Network type</li>
-<li>Battery level (during SOS events)</li>
-</ul>
-
-
-<h2>3. How We Use Your Information</h2>
-
-<p>Your information is used to provide and improve the I Am Alive service.</p>
-
-<ul>
-<li>Create and manage user accounts</li>
-<li>Enable safety check-ins</li>
-<li>Notify emergency contacts when check-ins are missed</li>
-<li>Send SOS alerts during emergencies</li>
-<li>Provide last known location during incidents</li>
-<li>Improve system reliability and security</li>
-<li>Prevent fraud and misuse</li>
-</ul>
 
 <p>
-We do not sell or rent your personal data to third parties.
+We do not sell personal data.
 </p>
-
-
-<h2>4. Advertising</h2>
 
 <p>
 The free version of the app may display advertisements through Google AdMob.
 </p>
 
+</section>
+
+<section id="terms" class="section">
+
+<h2>Terms of Service</h2>
+
 <p>
-AdMob may collect advertising identifiers or device information in order to deliver relevant ads.
+By using the I Am Alive app, you agree to use the service responsibly.
 </p>
 
 <p>
-Users who subscribe to premium plans may receive an ad-free experience.
+The app is designed to assist with safety notifications but cannot guarantee emergency response or safety outcomes.
 </p>
 
 <p>
-For more details please review Google's privacy policy:
+Users are responsible for ensuring emergency contacts are accurate and reachable.
 </p>
 
 <p>
-<a class="email" href="https://policies.google.com/privacy" target="_blank">
-https://policies.google.com/privacy
-</a>
+We reserve the right to suspend accounts that abuse or misuse the platform.
 </p>
 
+</section>
 
-<h2>5. Payments</h2>
+<section id="safety" class="section">
+
+<h2>Safety Disclaimer</h2>
 
 <p>
-Subscriptions and in-app purchases are processed securely through Flutterwave.
+I Am Alive is designed to assist with personal safety but should not replace emergency services.
 </p>
 
 <p>
-We do not store full payment card information on our servers.
-All payment data is processed by Flutterwave according to their own privacy and security policies.
+In life-threatening emergencies, users should contact local emergency services immediately.
 </p>
-
-
-<h2>6. Data Security</h2>
 
 <p>
-We implement reasonable security measures to protect your information including:
+The app provides alerts and notifications to trusted contacts but cannot guarantee response times or assistance.
 </p>
 
-<ul>
-<li>Secure password encryption</li>
-<li>HTTPS encrypted communication</li>
-<li>Authentication tokens for secure sessions</li>
-<li>Access controls for sensitive data</li>
-<li>Audit logging of important actions</li>
-</ul>
+</section>
 
-<p>
-While we strive to protect your information, no digital system can guarantee absolute security.
-</p>
+<section id="deletion" class="section">
 
-
-<h2>7. Data Retention</h2>
-
-<p>
-We retain personal information only as long as necessary to provide services.
-</p>
-
-<ul>
-<li>Account data is retained while the account remains active</li>
-<li>Location data may be automatically deleted after a retention period</li>
-<li>Incident reports may be stored for moderation and safety review</li>
-</ul>
+<h2>Data Deletion Request</h2>
 
 <p>
 Users may request deletion of their account and personal data.
 </p>
 
-
-<h2>8. User Control</h2>
-
 <p>
-Users have control over their personal data through application settings.
-</p>
-
-<ul>
-<li>Enable or disable location tracking</li>
-<li>Manage emergency contacts</li>
-<li>Update account information</li>
-<li>Manage notification preferences</li>
-<li>Request account deletion</li>
-</ul>
-
-
-<h2>9. Children's Privacy</h2>
-
-<p>
-I Am Alive is not intended for children under the age of 13.
-</p>
-
-<p>
-We do not knowingly collect personal information from children.
-If such data is discovered, it will be removed immediately.
-</p>
-
-
-<h2>10. Third-Party Services</h2>
-
-<p>
-The application relies on trusted service providers to deliver core functionality.
-</p>
-
-<ul>
-<li>Expo Push Notifications</li>
-<li>Africa's Talking (SMS alerts)</li>
-<li>Brevo (email notifications)</li>
-<li>Flutterwave (payments)</li>
-<li>Google AdMob (advertising)</li>
-</ul>
-
-<p>
-These providers may process limited information necessary to perform their services.
-</p>
-
-
-<h2>11. Changes to This Policy</h2>
-
-<p>
-We may update this Privacy Policy from time to time.
-</p>
-
-<p>
-Updates may occur due to new features, legal requirements, or improvements to our service.
-</p>
-
-<p>
-The most recent version will always be available on this page.
-</p>
-
-
-<h2>12. Contact Us</h2>
-
-<p>
-If you have questions or concerns regarding this Privacy Policy, please contact us:
+To request account deletion please send an email including your registered email address.
 </p>
 
 <p>
 Email:
-<a class="email" href="mailto:support@iamalive.app">
-support@iamalive.app
-</a>
+<strong>support@iamalive.app</strong>
 </p>
 
-</div>
+<p>
+Once verified, your account and associated data will be permanently removed.
+</p>
+
+</section>
+
+<section id="support" class="section">
+
+<h2>Support</h2>
+
+<p>
+If you have questions, issues, or feedback, please contact our support team.
+</p>
+
+<p>
+Email: <strong>support@iamalive.app</strong>
+</p>
+
+<p>
+We aim to respond to all inquiries within 48 hours.
+</p>
+
+</section>
 
 <footer>
+
 <p>© 2026 I Am Alive. All rights reserved.</p>
+
 </footer>
 
 </div>

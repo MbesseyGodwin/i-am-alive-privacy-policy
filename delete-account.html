@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete My I Am Alive Account</title>
+  <meta name="description" content="Request deletion of your I Am Alive account and associated personal data."/>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --danger: #dc2626;
+      --bg: #f8fafc;
+      --text: #1f2937;
+      --gray: #6b7280;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 480px;
+      margin: 40px auto;
+      padding: 24px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    h1 {
+      color: var(--danger);
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .subtitle {
+      color: var(--gray);
+      text-align: center;
+      margin-bottom: 32px;
+      font-size: 1rem;
+    }
+    label {
+      display: block;
+      margin: 24px 0 8px;
+      font-weight: 600;
+      color: #374151;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 24px;
+      background: var(--danger);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #b91c1c;
+    }
+    button:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+    }
+    .info-box {
+      background: #fef2f2;
+      border-left: 4px solid var(--danger);
+      padding: 16px;
+      margin: 24px 0;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: #7f1d1d;
+    }
+    .success {
+      background: #ecfdf5;
+      border-left: 4px solid #10b981;
+      color: #065f46;
+      padding: 16px;
+      border-radius: 6px;
+      margin: 24px 0;
+      text-align: center;
+    }
+    .error {
+      background: #fef2f2;
+      border-left: 4px solid var(--danger);
+      color: #991b1b;
+      padding: 16px;
+      border-radius: 6px;
+      margin: 24px 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--gray);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Delete My Account</h1>
+  <p class="subtitle">Permanently remove your I Am Alive account and associated data</p>
+
+  <div class="info-box">
+    <strong>Important:</strong> This action is <strong>permanent</strong> and <strong>cannot be undone</strong>.<br>
+    We will delete:
+    <ul>
+      <li>Your profile (name, email, phone)</li>
+      <li>Emergency contacts</li>
+      <li>Check-in history</li>
+      <li>Location data & SOS records</li>
+    </ul>
+    <strong>Retention:</strong> All personal data is removed within 30 days. Some anonymized system logs may be kept longer for security & legal reasons.
+  </div>
+
+  <form id="deleteForm">
+    <label for="fullName">Full Name (as registered)</label>
+    <input type="text" id="fullName" name="fullName" placeholder="Mbessey Godwin Lawrence" required autocomplete="name"/>
+
+    <label for="identifier">Email or Phone Number (used during registration)</label>
+    <input type="text" id="identifier" name="identifier" placeholder="example@gmail.com or +234XXXXXXXXXX" required autocomplete="email tel"/>
+
+    <button type="submit" id="submitBtn">Request Account Deletion</button>
+  </form>
+
+  <div id="result" style="display:none;"></div>
+
+  <footer>
+    I Am Alive – Port Harcourt, Nigeria<br>
+    Support: support@iamalive.app
+  </footer>
+</div>
+
+<script>
+  const form = document.getElementById('deleteForm');
+  const resultDiv = document.getElementById('result');
+  const submitBtn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Processing...';
+
+    const fullName = document.getElementById('fullName').value.trim();
+    const identifier = document.getElementById('identifier').value.trim();
+
+    if (!fullName || !identifier) {
+      showMessage('Please fill in both fields.', 'error');
+      resetButton();
+      return;
+    }
+
+    try {
+      // Replace with your real backend endpoint
+      const response = await fetch('https://your-api-domain.com/api/request-account-deletion', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fullName, identifier })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        showMessage(
+          'Account deletion request received.<br>We will process it within 30 days.<br>You will receive a confirmation email/SMS.',
+          'success'
+        );
+        form.style.display = 'none';
+      } else {
+        showMessage(data.message || 'Something went wrong. Please try again or contact support.', 'error');
+      }
+    } catch (err) {
+      showMessage('Network error. Please check your connection and try again.', 'error');
+    } finally {
+      resetButton();
+    }
+  });
+
+  function showMessage(text, type) {
+    resultDiv.innerHTML = `<div class="${type}">${text}</div>`;
+    resultDiv.style.display = 'block';
+  }
+
+  function resetButton() {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Request Account Deletion';
+  }
+</script>
+
+</body>
+</html>

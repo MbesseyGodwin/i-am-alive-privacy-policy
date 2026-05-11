@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>I Am Alive | Personal Safety App</title>
+
+<meta name="description" content="I Am Alive is a personal safety app for daily check-ins, emergency alerts, SOS notifications, and trusted contact safety monitoring.">
+
+<meta name="keywords" content="personal safety app, emergency alert app, check-in app, SOS app, safety monitoring">
+
+<meta name="author" content="I Am Alive">
 
 <style>
 
@@ -23,8 +31,12 @@ margin:0;
 padding:0;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
 background:var(--bg);
 color:var(--text);
 line-height:1.7;
@@ -56,7 +68,12 @@ padding:15px 20px;
 .logo{
 font-weight:700;
 color:var(--primary);
-font-size:20px;
+font-size:22px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
 }
 
 nav a{
@@ -64,35 +81,64 @@ margin-left:20px;
 text-decoration:none;
 color:var(--text);
 font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:var(--primary);
 }
 
 .hero{
 text-align:center;
-padding:80px 20px;
+padding:90px 20px;
+background:linear-gradient(to bottom, #ffffff, #f3f4f6);
 }
 
 .hero h1{
-font-size:42px;
+font-size:46px;
 color:var(--dark);
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
 .hero p{
 color:var(--muted);
-font-size:18px;
+font-size:19px;
+max-width:700px;
+margin:auto;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:14px 24px;
+background:var(--primary);
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
+}
+
+.button:hover{
+opacity:0.9;
 }
 
 .section{
 background:white;
 margin-top:30px;
 padding:40px;
-border-radius:10px;
+border-radius:12px;
 box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
 .section h2{
 color:var(--primary);
 margin-bottom:20px;
+font-size:28px;
+}
+
+.section p{
+margin-bottom:15px;
 }
 
 ul{
@@ -100,28 +146,33 @@ padding-left:20px;
 margin-top:10px;
 }
 
+ul li{
+margin-bottom:10px;
+}
+
+.contact-box{
+background:#eff6ff;
+padding:15px;
+border-radius:8px;
+margin-top:15px;
+}
+
 footer{
 text-align:center;
 margin-top:40px;
-padding:20px;
+padding:30px 20px;
 color:var(--muted);
 font-size:14px;
-}
-
-.button{
-display:inline-block;
-margin-top:20px;
-padding:12px 20px;
-background:var(--primary);
-color:white;
-text-decoration:none;
-border-radius:6px;
 }
 
 @media(max-width:700px){
 
 .hero h1{
-font-size:30px;
+font-size:34px;
+}
+
+.hero p{
+font-size:17px;
 }
 
 .nav{
@@ -133,39 +184,55 @@ nav{
 margin-top:10px;
 }
 
+nav a{
+margin-left:0;
+margin-right:15px;
+margin-top:10px;
+}
+
+.section{
+padding:25px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <div class="nav">
+
 <div class="logo">I Am Alive</div>
+
 <nav>
 <a href="#about">About</a>
 <a href="#privacy">Privacy</a>
 <a href="#terms">Terms</a>
 <a href="#safety">Safety</a>
+<a href="#child-safety">Child Safety</a>
 <a href="#deletion">Data Deletion</a>
 <a href="#support">Support</a>
 </nav>
+
 </div>
+
 </header>
 
-<div class="hero">
+<section class="hero">
 
 <h1>Your Safety Matters</h1>
 
 <p>
-I Am Alive is a personal safety app that ensures someone knows if you are safe.
-Daily check-ins, SOS alerts, and location sharing help protect you when it matters most.
+I Am Alive is a personal safety and emergency alert app that helps ensure someone knows when you are safe. Daily check-ins, SOS alerts, and trusted contact notifications provide peace of mind when it matters most.
 </p>
 
 <a class="button" href="#about">Learn More</a>
 
-</div>
+</section>
 
 <div class="container">
 
@@ -175,19 +242,23 @@ Daily check-ins, SOS alerts, and location sharing help protect you when it matte
 
 <p>
 I Am Alive is a personal safety and emergency alert application designed to help users stay connected with trusted contacts.
-If a user fails to check in or triggers an emergency alert, the app automatically notifies their emergency contacts with relevant information including location details.
 </p>
 
 <p>
-The app is designed for individuals, travelers, families, and workers who want an extra layer of safety and peace of mind.
+If a user fails to check in or triggers an emergency alert, the app automatically notifies emergency contacts with relevant information, including location details when available.
+</p>
+
+<p>
+The app is designed for individuals, travelers, students, families, remote workers, and anyone seeking an extra layer of safety and reassurance.
 </p>
 
 <ul>
 <li>Daily safety check-ins</li>
 <li>Automatic missed check-in alerts</li>
-<li>Emergency SOS alerts</li>
-<li>Location sharing during incidents</li>
-<li>Trusted emergency contact notifications</li>
+<li>Emergency SOS notifications</li>
+<li>Location sharing during emergencies</li>
+<li>Trusted emergency contact alerts</li>
+<li>Personal safety monitoring</li>
 </ul>
 
 </section>
@@ -197,27 +268,30 @@ The app is designed for individuals, travelers, families, and workers who want a
 <h2>Privacy Policy</h2>
 
 <p>
-We respect your privacy and only collect data required to provide safety services.
+We respect user privacy and only collect information required to provide safety and emergency notification services.
 </p>
 
 <ul>
-<li>Email and phone number for account creation</li>
+<li>Email address and phone number for account creation</li>
 <li>Emergency contact information</li>
 <li>Location data during check-ins and SOS events</li>
-<li>Device information for reliability</li>
+<li>Device information for reliability and security</li>
 </ul>
 
 <p>
-Location data helps emergency contacts identify your last known position during emergencies.
-Users can control or disable location tracking in settings.
+Location data may be shared with trusted emergency contacts during safety alerts or emergency situations.
 </p>
 
 <p>
-We do not sell personal data.
+Users can manage or disable location permissions through their device settings.
 </p>
 
 <p>
-The free version of the app may display advertisements through Google AdMob.
+We do not sell personal information to third parties.
+</p>
+
+<p>
+The free version of the app may display advertisements through Google AdMob or similar advertising services.
 </p>
 
 </section>
@@ -227,19 +301,19 @@ The free version of the app may display advertisements through Google AdMob.
 <h2>Terms of Service</h2>
 
 <p>
-By using the I Am Alive app, you agree to use the service responsibly.
+By using the I Am Alive application, users agree to use the platform responsibly and lawfully.
 </p>
 
 <p>
-The app is designed to assist with safety notifications but cannot guarantee emergency response or safety outcomes.
+The app is intended to assist with safety notifications and emergency awareness but cannot guarantee emergency response, rescue, or safety outcomes.
 </p>
 
 <p>
-Users are responsible for ensuring emergency contacts are accurate and reachable.
+Users are responsible for ensuring their emergency contact information remains accurate and updated.
 </p>
 
 <p>
-We reserve the right to suspend accounts that abuse or misuse the platform.
+We reserve the right to suspend or terminate accounts that misuse, abuse, or attempt to harm the platform or other users.
 </p>
 
 </section>
@@ -249,16 +323,59 @@ We reserve the right to suspend accounts that abuse or misuse the platform.
 <h2>Safety Disclaimer</h2>
 
 <p>
-I Am Alive is designed to assist with personal safety but should not replace emergency services.
+I Am Alive is designed to support personal safety but does not replace police, medical services, or emergency responders.
 </p>
 
 <p>
-In life-threatening emergencies, users should contact local emergency services immediately.
+In life-threatening situations, users should immediately contact local emergency services.
 </p>
 
 <p>
-The app provides alerts and notifications to trusted contacts but cannot guarantee response times or assistance.
+The app sends notifications and alerts to trusted contacts but cannot guarantee response times or assistance availability.
 </p>
+
+</section>
+
+<section id="child-safety" class="section">
+
+<h2>Child Safety Standards</h2>
+
+<p>
+I Am Alive is committed to protecting children and preventing child sexual abuse and exploitation (CSAE) on our platform.
+</p>
+
+<p>
+We strictly prohibit:
+</p>
+
+<ul>
+<li>Child sexual abuse material (CSAM)</li>
+<li>Sexual exploitation of minors</li>
+<li>Child grooming or predatory behavior</li>
+<li>Human trafficking involving minors</li>
+<li>Any sexualized content involving children</li>
+</ul>
+
+<p>
+Users can report harmful or inappropriate behavior through the app or by contacting support directly.
+</p>
+
+<p>
+Accounts found violating child safety policies may be suspended or permanently removed.
+</p>
+
+<p>
+Where required by law, we cooperate with relevant law enforcement and child protection authorities.
+</p>
+
+<div class="contact-box">
+
+<p>
+For child safety concerns contact:
+<strong>mbesseygodwin@gmail.com</strong>
+</p>
+
+</div>
 
 </section>
 
@@ -267,20 +384,24 @@ The app provides alerts and notifications to trusted contacts but cannot guarant
 <h2>Data Deletion Request</h2>
 
 <p>
-Users may request deletion of their account and personal data.
+Users may request deletion of their account and associated personal data at any time.
 </p>
 
 <p>
-To request account deletion please send an email including your registered email address.
+To request account deletion, please contact support using your registered email address.
 </p>
+
+<div class="contact-box">
 
 <p>
 Email:
 <strong>support@iamalive.app</strong>
 </p>
 
+</div>
+
 <p>
-Once verified, your account and associated data will be permanently removed.
+Once verification is completed, the account and related data will be permanently deleted from our systems within a reasonable processing period.
 </p>
 
 </section>
@@ -290,26 +411,39 @@ Once verified, your account and associated data will be permanently removed.
 <h2>Support</h2>
 
 <p>
-If you have questions, issues, or feedback, please contact our support team.
+If you have questions, feedback, technical issues, or safety concerns, please contact our support team.
+</p>
+
+<div class="contact-box">
+
+<p>
+Support Email:
+<strong>support@iamalive.app</strong>
 </p>
 
 <p>
-Email: <strong>support@iamalive.app</strong>
+Child Safety Contact:
+<strong>mbesseygodwin@gmail.com</strong>
 </p>
 
+</div>
+
 <p>
-We aim to respond to all inquiries within 48 hours.
+We aim to respond to inquiries within 48 hours.
 </p>
 
 </section>
 
 <footer>
 
-<p>© 2026 I Am Alive. All rights reserved.</p>
+<p>
+© 2026 I Am Alive. Personal Safety Platform. All rights reserved.
+</p>
 
 </footer>
 
 </div>
 
 </body>
+
 </html>
